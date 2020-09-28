@@ -1,0 +1,25 @@
+insert: The big o is O(1), because the effort is same no matter how many objects we insert.
+
+display: The big o is O(n), because the more objects we put in the bag, the more objects we have to print.
+
+seqentialSearchByIsbn: The big o is O(n), because it searches through the whole array to 
+find the key. But, we may find the value before we go through the whole array for which the big o is n/2.
+ 2 is not significant if we have a million objects in array.
+
+binary search by isbn: The big o is O(logn), because it divides the array indices into half 
+and keep doing it until it finds the value. This way it doesnt need to go through the whole array.
+
+Binary search by last name: The big o is O(logn), because it also divides the array into half.
+
+bubble sort: The big o is O(n^2), because it has two for loops. Each time the outer loop runs, 
+the inner loop goes through the number of outer loop too.
+
+Delete by isbn: The big o is O(n), because it has two loops and the First loop goes through the whole array. 
+Then the second loop looks for the value. It may find the value at the end of the array and go through few more indices to shift indices.
+So, it doesnt go through the whole array.
+
+Delete by last name: The big o is O(n^2). Because, it has nested loops. 
+
+EmitTitleAndIsbn: The big o is O(n), because it reads files and then insert them. The more lines a file has, the more information it reads.
+
+emit price: The big o is O(1), because only find a random value once.

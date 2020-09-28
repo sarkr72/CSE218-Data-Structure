@@ -1,0 +1,20 @@
+ACC116
+Practical Accounting
+3.0
+TEACHING
+CSE110
+College Seminar
+1.0
+TAUGHT
+ACC115
+Managerial Accounting
+3.0
+TEACHING
+ACC126
+Governmental Accounting
+3.0
+TO_TEACH
+MAT142
+Calculas/Anelytical Geomatry II
+4.0
+TEACHING
