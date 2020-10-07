@@ -1,4 +1,4 @@
-package p6;
+package p4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,14 +46,14 @@ public class StoreTheStory {
 
 		while (parentIterator.hasNext()) {
 			ParentLink currentParentLink = parentIterator.next();
-			for (int i = 1; i < strList.size(); i++) {
+			for (int i = 0; i < strList.size(); i++) {
 //			for (int i = 0; i < 1000; i++) {
 				String currentWord = strList.get(i);
 				if (currentParentLink.getdData().equals(currentWord)) {
 					if (i < strList.size() - 1) {
 //					if (i < 1000) {
 //						String nextWord = strList.get(i + 1);
-						String nextWord = strList.get(i-1);
+						String nextWord = strList.get(i);
 						currentParentLink.babyList.get().add(new BabyLink(nextWord));
 					}
 				}
@@ -66,8 +66,8 @@ public class StoreTheStory {
 		parentIterator = parentList.get().iterator();
 		while (parentIterator.hasNext()) {
 			ParentLink link = parentIterator.next();
-			link.display();
-//			link.babyList.display();
-//			System.out.println("size is:" + link.babyList.size());
-		}}}
-//		
+//			link.display();
+			link.babyList.display();
+			System.out.println("size is:" + link.babyList.size());
+		}
+}}

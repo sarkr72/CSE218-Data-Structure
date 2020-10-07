@@ -1,4 +1,4 @@
-package p6;
+package p7;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

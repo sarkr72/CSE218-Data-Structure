@@ -4,21 +4,22 @@ import p2.BabyList;
 
 public class ParentLink {
 
-	public String dData;
-	private BabyList babyList;
-	public ParentLink next;
+	private String uniqueWord;
+	public  BabyList babyList;
+//	public ParentLink next;
 	
-	public ParentLink(String dData) {
-		this.dData = dData;
+	public ParentLink(String uniqueWord) {
+		this.uniqueWord = uniqueWord;
+		this.babyList = new BabyList();
 	}
 
-//	public String getdData() {
-//		return dData;
-//	}
-//
-//	public void setdData(String dData) {
-//		this.dData = dData;
-//	}
+	public String getdData() {
+		return uniqueWord;
+	}
+
+	public void setdData(String dData) {
+		this.uniqueWord = dData;
+	}
 //
 //	public ParentLink getNext() {
 //		return next;
@@ -28,7 +29,7 @@ public class ParentLink {
 //		this.next = next;
 //	}
 	
-	public BabyList getBabyList() {
+	public   BabyList getBabyList() {
 		return babyList;
 	}
 
@@ -37,6 +38,14 @@ public class ParentLink {
 	}
 
 	public  void display() {
-		System.out.print(dData + " ");
+		System.out.println(uniqueWord + " -> " + babyList);
+	}
+	
+	public boolean equals(ParentLink link) {
+		if(this.uniqueWord.compareToIgnoreCase(link.uniqueWord) == 0) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

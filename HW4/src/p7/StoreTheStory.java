@@ -1,4 +1,4 @@
-package p6;
+package p7;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,17 +16,20 @@ public class StoreTheStory {
 		File storyFile = new File("story");
 		Scanner scanFile = new Scanner(storyFile);
 
+//		int n = 0;
 		LinkedList<String> strList = new LinkedList<>();
 //		while (scanFile.hasNextLine()) {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 1000; i++) {
 			String currentLine = scanFile.nextLine().replaceAll("\\p{Punct}", "").toLowerCase();
 			String[] words = currentLine.split(" ");
 			for (String word : words) {
 				strList.add(word);
+//				n++;
+//				System.out.println(n);
 			}
 		}
 		scanFile.close();
-
+//System.out.println(strList);
 		LinkedList<String> uniqueWords = new LinkedList<>();
 		Iterator<String> iterator = strList.iterator();
 		while (iterator.hasNext()) {
@@ -52,8 +55,8 @@ public class StoreTheStory {
 				if (currentParentLink.getdData().equals(currentWord)) {
 					if (i < strList.size() - 1) {
 //					if (i < 1000) {
-//						String nextWord = strList.get(i + 1);
-						String nextWord = strList.get(i-1);
+						String nextWord = strList.get(i + 1);
+//						String nextWord = strList.get(i);
 						currentParentLink.babyList.get().add(new BabyLink(nextWord));
 					}
 				}
@@ -64,10 +67,39 @@ public class StoreTheStory {
 //		parentList.get().get(1).getBabyList().size();
 
 		parentIterator = parentList.get().iterator();
+		
+//		writeParagraph(parentList, parentIterator);
 		while (parentIterator.hasNext()) {
 			ParentLink link = parentIterator.next();
 			link.display();
 //			link.babyList.display();
 //			System.out.println("size is:" + link.babyList.size());
-		}}}
+		}
+		
+	}
+
+	public static void writeParagraph(ParentList parentList, Iterator<ParentLink> parentIterator) {
+//		int rand = (int) (Math.random() * 100);
+
+		System.out.println("enter a word: ");
+		Scanner scan = new Scanner(System.in);
+		String word = scan.next();
+		String str = "";
+		for (int i = 0; i < 100; i++) {
+			while (parentIterator.hasNext()) {
+				ParentLink parentLink = parentIterator.next();
+				if (parentLink.getdData().contentEquals(word)) {
+					str += word + " ";
+					int babySize = parentLink.getBabyList().get().size();
+					word = parentLink.getBabyList().get().get((int) (Math.random() * babySize)) + "";
+//					str += word + " ";
+				}else{
+//					System.out.println("parent link not found");
+		continue;
+				}
+			}
+		}
+		System.out.println(str);
+	}
+}
 //		

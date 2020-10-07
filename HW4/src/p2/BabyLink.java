@@ -4,14 +4,23 @@ import p1.ParentLink;
 
 public class BabyLink {
 
-	public String dData;
-	public BabyLink next;
+	public String nextWord;
+//	public BabyLink next;
 	
 	public BabyLink(String dData) {
-		this.dData = dData;
+		this.nextWord = dData;
+	}
+	
+	public String getNextWord() {
+		return nextWord;
 	}
 	
 	public  void display() {
-		System.out.print(dData + " ");
+		System.out.print(nextWord + " ");
+	}
+	
+	@Override
+	public String toString() {
+		return nextWord;
 	}
 }

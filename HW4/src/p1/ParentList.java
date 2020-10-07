@@ -1,34 +1,21 @@
 package p1;
 
+import java.util.LinkedList;
+
+import p1.ParentLink;
+
 public class ParentList {
-private ParentLink first;
+	private LinkedList<ParentLink> parentList;
 	
 	public ParentList() {
-		first = null;
+		parentList = new LinkedList<>();
 	}
 	
-	public ParentLink getFirst() {
-		return first;
+	public LinkedList<ParentLink> get() {
+		return parentList;
 	}
 	
-	public boolean isEmpty() {
-		return first == null;
-	}
-	
-	public void setFirst(ParentLink newLink) {
-		first = newLink;
-	}
-	
-	public ListIterator getIterator() {
-		return new ListIterator(this);
-	}
-	
-	public void displayList() {
-		ParentLink current = first;
-		while(current != null) {
-			current.display();
-			current = current.next;
-		}
-		System.out.println();
+	public int size() {
+		return parentList.size();
 	}
 }
