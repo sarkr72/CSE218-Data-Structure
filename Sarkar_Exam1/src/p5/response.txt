@@ -1,0 +1,10 @@
+N links: Big O is O(n).
+ O(1).
+O(n).
+ O(1).
+ O(n).
+O(n).
+O(log n).
+O(n^2).
+O(n^2).
+O(n).
