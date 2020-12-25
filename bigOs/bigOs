@@ -1,0 +1,23 @@
+N links: Big O is O(n).linkedList: insertion O(1), delete O(1), slow search O(n)
+ insert one link: O(1).
+a link into sorted linkedlist: O(n).
+ push and pop based on linkedlist: O(1).
+ search for a link in a sorted linked list best S.: O(n).
+seqquential search: O(n).
+binary: O(log n).
+bubble: O(n^2).
+selection: O(n^2).
+insertion best Scenerio: O(n).
+usually n^2
+
+recursive: depends on the method inside: usually O(n), O(logn)
+only merge two sorted arrays : O(n), special case O(n)
+merge sort: nlogn
+quick Sort: nlogn,
+shell sort average case: best case O(nlogn), n * (logn)^2,  for most data highest estimetes n^3/2
+partition: O(n)
+tree: fast search binary: log(n), slow insert and delete (n), 
+binary tree: insert, search, delete: log(n)
+treeSet: add and find and revome, contains(): O(logn), finding with iterator, stream: O(n);
+treeMap: search: O(logn)
+
