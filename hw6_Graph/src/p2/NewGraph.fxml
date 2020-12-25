@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="p2.Controller">
+   <children>
+      <VBox layoutY="3.0" prefHeight="588.0" prefWidth="600.0">
+         <children>
+            <LineChart fx:id="lneChart" prefHeight="513.0" prefWidth="600.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
