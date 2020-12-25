@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p3.Controller3">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="titleField" alignment="CENTER" promptText="title" />
+                  <TextField fx:id="isbnField" promptText="isbn" />
+                  <TextField fx:id="priceField" promptText="price" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#insert" text="INSERT" />
+                  <Button mnemonicParsing="false" onAction="#search" text="SEARCH" />
+                  <Button mnemonicParsing="false" onAction="#delete" text="REMOVE" />
+               </children>
+            </HBox>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" promptText="textArea" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
